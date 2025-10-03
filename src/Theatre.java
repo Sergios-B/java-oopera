@@ -1,0 +1,44 @@
+import java.util.ArrayList;
+
+import Person.*;
+import Show.*;
+
+public class Theatre {
+    public static void main(String[] args) {
+        ArrayList<Actor> listOfActors = new ArrayList<>();
+        Actor actorAlex = new Actor("Alex", "Gabe", gender.MALE, 1.87);
+        Actor actorBrus = new Actor("Brus", "Vilez", gender.MALE, 1.80);
+        Actor actorInna = new Actor("Inna", "Pinakolada", gender.FEMALE, 1.57);
+
+        Director directorBob = new Director("Bob", "Marly", gender.MALE, 3);
+        Director directorFinn = new Director("Finn", "Crisp", gender.MALE, 5);
+
+        Person choreographerEva = new Person("Eva", "Burn", gender.FEMALE);
+        Person authorKik = new Person("Kik", "Butovski", gender.MALE);
+
+        Show show = new Show("3 cats", 90, directorFinn, listOfActors);
+        Opera opera = new Opera("Вольный стрелок", 180, directorBob, listOfActors, authorKik,
+                "Одна из вершин немецкого романтизма и первая немецкая национальная опера.", 10);
+        Ballet ballet = new Ballet("Тщетная предосторожность", 100, directorBob, listOfActors, authorKik,
+                "Балет отличается комедийным характером, вызывая у зрителей смех и радость.", choreographerEva);
+
+        show.newActor(actorAlex);
+        show.newActor(actorBrus);
+        opera.newActor(actorBrus);
+        opera.newActor(actorAlex);
+        ballet.newActor(actorInna);
+        ballet.newActor(actorBrus);
+
+        show.printListOfActors();
+        opera.printListOfActors();
+        ballet.printListOfActors();
+
+        ballet.setActor(actorAlex, "Pinakolada");
+        ballet.printListOfActors();
+
+        opera.setActor(actorInna, "Ivanov");
+
+        opera.printLibrettoText();
+        ballet.printLibrettoText();
+    }
+}
