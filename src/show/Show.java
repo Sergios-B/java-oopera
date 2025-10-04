@@ -1,8 +1,8 @@
-package Show;
+package show;
 
 import java.util.ArrayList;
 
-import Person.*;
+import person.*;
 
 public class Show {
     private String title;

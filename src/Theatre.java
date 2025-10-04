@@ -1,20 +1,20 @@
 import java.util.ArrayList;
 
-import Person.*;
-import Show.*;
+import person.*;
+import show.*;
 
 public class Theatre {
     public static void main(String[] args) {
         ArrayList<Actor> listOfActors = new ArrayList<>();
-        Actor actorAlex = new Actor("Alex", "Gabe", gender.MALE, 1.87);
-        Actor actorBrus = new Actor("Brus", "Vilez", gender.MALE, 1.80);
-        Actor actorInna = new Actor("Inna", "Pinakolada", gender.FEMALE, 1.57);
+        Actor actorAlex = new Actor("Alex", "Gabe", Gender.MALE, 1.87);
+        Actor actorBrus = new Actor("Brus", "Vilez", Gender.MALE, 1.80);
+        Actor actorInna = new Actor("Inna", "Pinakolada", Gender.FEMALE, 1.57);
 
-        Director directorBob = new Director("Bob", "Marly", gender.MALE, 3);
-        Director directorFinn = new Director("Finn", "Crisp", gender.MALE, 5);
+        Director directorBob = new Director("Bob", "Marly", Gender.MALE, 3);
+        Director directorFinn = new Director("Finn", "Crisp", Gender.MALE, 5);
 
-        Person choreographerEva = new Person("Eva", "Burn", gender.FEMALE);
-        Person authorKik = new Person("Kik", "Butovski", gender.MALE);
+        Person choreographerEva = new Person("Eva", "Burn", Gender.FEMALE);
+        Person authorKik = new Person("Kik", "Butovski", Gender.MALE);
 
         Show show = new Show("3 cats", 90, directorFinn, listOfActors);
         Opera opera = new Opera("Вольный стрелок", 180, directorBob, listOfActors, authorKik,

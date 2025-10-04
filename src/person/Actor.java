@@ -1,13 +1,11 @@
-package Person;
+package person;
 
 import java.util.Objects;
 
-import Show.*;
-
 public class Actor extends Person {
-    double height;
+    private double height;
 
-    public Actor(String name, String surname, gender gender, double height) {
+    public Actor(String name, String surname, Gender gender, double height) {
         super(name, surname, gender);
         this.height = height;
     }
@@ -28,5 +26,9 @@ public class Actor extends Person {
     @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), height);
+    }
+
+    public double getHeight() {
+        return height;
     }
 }

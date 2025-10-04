@@ -1,8 +1,8 @@
-package Show;
+package show;
 
 import java.util.ArrayList;
 
-import Person.*;
+import person.*;
 
 
 public class Opera extends MusicalShow {
